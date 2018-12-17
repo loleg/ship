@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+
+[packages]
+flask = "*"
+sqlalchemy = "*"
+"zope.proxy" = "*"
+flask-script = "*"
+python-memcached = "*"
+
+[requires]
+python_version = "2.7"
