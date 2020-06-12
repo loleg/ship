@@ -6,7 +6,7 @@ from ship import config
 from ship.models import Town
 
 
-YEARS = [2012, 2013, 2014]
+YEARS = [2012, 2013, 2014, 2019]
 
 
 class TestDb(unittest.TestCase):
@@ -70,17 +70,10 @@ class TestDb(unittest.TestCase):
             '2012_insurers.csv', '2012_towns', '2012_ch.csv', '2012_eu.csv',
             '2013_insurers.csv', '2013_towns', '2013_ch.csv', '2013_eu.csv',
             '2014_insurers.csv', '2014_towns', '2014_ch.csv', '2014_eu.csv',
+            '2019_insurers.csv', '2019_towns', '2019_ch.csv', '2019_eu.csv',
         ]
 
         self.assertEqual(load.available_years(files), YEARS)
-
-        files = [
-            '2012-insurers.csv', '2012-towns', '2012-ch.csv', '2012-eu.csv',
-            '2013-insurers.csv', '2013-towns', '2013-ch.csv', '2013-eu.csv',
-            '2014-insurers.csv', '2014-towns', '2014-ch.csv', '2014-eu.csv',
-        ]
-
-        self.assertEqual(load.available_years(files), [])
 
         files = [
             '2012_insurers.csv', '2012_towns', '2012_ch.csv', '2012_eu.csv',

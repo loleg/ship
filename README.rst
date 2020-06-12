@@ -30,7 +30,6 @@ Create Project
 
 ::
 
-    mkdir ship && cd ship
     git clone git://github.com/seantis/ship.git .
 
 Install SHIP
@@ -43,6 +42,15 @@ Install SHIP
     virtualenv -p python2.7 --no-site-packages .
     source bin/activate
     python setup.py develop
+
+A more current alternative is to use poetry
+
+::
+
+    poetry install
+    poetry shell
+    python setup.py develop
+
 
 Test SHIP
 ---------
@@ -75,16 +83,16 @@ To understand the data read models/premium.py and db.py
 Import latest data
 ==================
 
-The latest data for the Swiss healthinsurance premiums are not yet
-publically available, but they will be soon. Currently to get them one
-has to contact the Swiss governement.
+The latest data for the Swiss health insurance premiums are available here:
+
+https://opendata.swiss/de/dataset/health-insurance-premiums
 
 The data they release is a mixture of csv and xls files. To import them
 into ship one has to do the following:
 
 1. Check if the data structure has changed.
 
-   Compare Doku\_PraemienDaten.txt in the data release with
+   Compare `Erläuterungen zu den Prämiendaten` in the data release with
    ``ship/rawdata/doku_praemien_daten.txt``. The field descriptions should
    match.
 

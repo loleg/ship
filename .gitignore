@@ -12,3 +12,4 @@ examples/map/lib/
 examples.db
 premiums.db
 dsn.txt
+.eggs/

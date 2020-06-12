@@ -2,7 +2,7 @@
 
 name = "ship"
 description = "Swiss Health Insurance Premiums."
-version = '0.3'
+version = '0.4'
 
 
 from setuptools import setup

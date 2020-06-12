@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "ship"
+version = "0.4"
+description = ""
+authors = ["Oleg Lavrovsky <oleg@opendata.ch>", "Denis Krienbühl <denis.krienbuehl@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "<3"
+flask = "*"
+sqlalchemy = "*"
+"zope.proxy" = "*"
+flask-script = "*"
+python-memcached = "*"
+
+[tool.poetry.dev-dependencies]
+pytest-cov = "*"
